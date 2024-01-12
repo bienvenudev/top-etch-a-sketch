@@ -36,6 +36,10 @@ choiceBtn.addEventListener('click', function() {
 		
 	const numOfSquare = +prompt('Enter the number of squares per side?');
 
+	if (numOfSquare == 0) {
+		return;
+	}
+
 	if (numOfSquare > 64) {
 					alert(`You can't exceed 64 squares!`);
 					return;
