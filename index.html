@@ -4,73 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Etch-a-Sketch</title>
-	<style>
-		/* * {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		} */
-
-		.container {
-			/* max-width: 256px; */
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		.grid-element {
-			/* width: 16px;
-			height: 16px; */
-		}
-
-		.grid-element:hover {
-			background-color: red;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<h1>Etch-A-Sketch</h1>
 	<button class="choice-btn">Click here</button>
 
-	<div class="container">
-
-	</div>
+	<div class="container"></div>
 	
-	<script>
-		const container = document.querySelector('.container');
-		const choiceBtn = document.querySelector('.choice-btn');
-		const gridElements = document.querySelectorAll('.grid-element');;
-		let numOfSquares = 0;
-
-		choiceBtn.addEventListener('click', function() {
-				numOfSquares = +prompt('Enter the number of squares per side?');
-				const totalSquares = numOfSquares * numOfSquares;
-				
-				if (numOfSquares > 100) {
-					alert(`You can't exceed 100 squares!`);
-				}
-
-		console.log(numOfSquares);
-
-				gridElements.forEach((grid) => {
-					grid.style.width = `${numOfSquares}px`;
-					grid.style.height = `${numOfSquares}px`;
-				});
-
-		for (let i = 0; i < totalSquares; i++) {
-			const newDiv = document.createElement('div');
-			
-			newDiv.setAttribute('class', 'grid-element');
-
-			container.style.maxWidth = `${totalSquares}px`;
-
-			// gridElements.style.width = `${numOfSquares}px`;
-			// gridElements.style.height = `${numOfSquares}px`;
-
-			container.appendChild(newDiv);
-		}
-		});
-
-	
-
-	</script>
+	<script src="main.js"></script>
 </body>
 </html>
