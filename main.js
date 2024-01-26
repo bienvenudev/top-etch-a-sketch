@@ -21,6 +21,12 @@ function createGrid(num = 16) {
 
 		document.querySelectorAll('.grid-element').forEach((grid) => {
 			grid.addEventListener('mouseenter', function() {
+				//rainbow colors
+				// const randomColor1 = Math.floor(Math.random() * 255) + 1;
+				// const randomColor2 = Math.floor(Math.random() * 255) + 1;
+				// const randomColor3 = Math.floor(Math.random() * 255) + 1;
+				// grid.style.background = `rgb(${randomColor1},${randomColor2},${randomColor3})`;
+
 				grid.style.background = 'black';
 			})
 	})
@@ -36,7 +42,7 @@ choiceBtn.addEventListener('click', function() {
 		
 	const numOfSquare = +prompt('Enter the number of squares per side?');
 
-	if (numOfSquare == 0) {
+	if (numOfSquare < 1) {
 		return;
 	}
 
@@ -48,5 +54,4 @@ choiceBtn.addEventListener('click', function() {
 	removeItem();
 	
 	createGrid(numOfSquare);
-
 });
