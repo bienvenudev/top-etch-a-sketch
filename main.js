@@ -41,14 +41,20 @@ function removeItem() {
 choiceBtn.addEventListener('click', function() {
 		
 	const numOfSquare = +prompt('Enter the number of squares per side?');
+	
+	if (!Number.isInteger(gridNum)) {
+		alert("Sorry, only numbers are allowed!");
+		return;
+	}
 
 	if (numOfSquare < 1) {
+		alert("Sorry, you can't enter a number less than 1!");
 		return;
 	}
 
 	if (numOfSquare > 64) {
-					alert(`You can't exceed 64 squares!`);
-					return;
+		alert(`You can't exceed 64 squares!`);
+		return;
 		}
 
 	removeItem();
