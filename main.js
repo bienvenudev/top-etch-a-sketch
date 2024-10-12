@@ -42,7 +42,7 @@ choiceBtn.addEventListener('click', function() {
 		
 	const numOfSquare = +prompt('Enter the number of squares per side?');
 	
-	if (!Number.isInteger(gridNum)) {
+	if (!Number.isInteger(numOfSquare)) {
 		alert("Sorry, only numbers are allowed!");
 		return;
 	}
